@@ -9,7 +9,8 @@ exports.socketConnection = function(server){
     console.log("Connection made with use of Socket.io <3");
 
     socket.on('message', message=>{
-      socket.emit('I have recieved ' + message);
+      console.log(message);
+      socket.emit('message', 'I have recieved \"' + message + '\"');
     });
 
     socket.on('disconnect', ()=>{
