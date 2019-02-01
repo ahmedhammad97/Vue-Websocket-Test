@@ -28,6 +28,7 @@ export default {
       this.currentMessage = "";
     }
   },
+  // Socket object availabe as component option, thanks to socket global object <3
   sockets: {
       connect: function () {
           this.recievedMessages.push("Connected!");
